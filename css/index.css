@@ -1,0 +1,129 @@
+/* rest-css*/
+html,body,img{
+  padding:0;
+  margin: 0;
+}
+div.home{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+img{
+  display: block;
+}
+img.homepic{
+  width: 100%;
+  height: 100%;
+}
+.homebtn{
+    position: absolute;
+    margin: auto;
+    left: 0;
+    bottom: 2%;
+    right: 0%;
+    width: 135px;
+    z-index: 3;
+    animation: fangda 5s linear 2s infinite alternate;
+
+}
+@keyframes fangda
+{
+	0%   {transform: scale(1, 1);}
+	50%  {transform: scale(0.9, 0.9);}
+	100% {transform: scale(1, 1);}
+}
+.robot{
+    position: absolute;
+    bottom: 3%;
+    left: 47%;
+    width: 100px;
+    z-index: 2;
+}
+.company{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.companypic{
+    width: 100%;
+    height: 100%;
+
+}
+.pipe{
+    width: 32px;
+    height: 100%;
+    position: absolute;
+    background: rgba(63, 124, 168,1);
+    margin: auto;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+.pipe .dot{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: url(../img/ptwo.png);
+    background-size: 100%;
+    margin: 71px 0;
+    animation: fangda2 5s linear 2s infinite alternate;
+}
+@keyframes fangda2
+{
+	0%   {transform: scale(1, 1);}
+	50%  {transform: scale(0.8, 0.8);}
+	100% {transform: scale(1.1, 1.1);}
+}
+.main-content{
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+.inner-wrapper{
+    width: 500%;
+}
+.research{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    float: left;
+}
+.researchpic{
+    width: 100%;
+    height: 100%;
+}
+.researchgif{
+    position: absolute;
+    left: 50px;
+    top: 200px;
+    width: 200px;
+    animation: upAndDown 5s linear 2s infinite alternate
+}
+.introduce{
+    position: absolute;
+    width: 80%;
+    left: 0;
+    top: 0;
+    bottom: 0%;
+    right: 0;
+    margin: auto;
+    height: 80%;
+    background: rgb(112, 123, 181,0.4);
+    border-radius: 5px;
+    border: 1px solid rgba(203, 210, 255, 0.22);
+}
+.title{
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+
+}
+.content{
+  padding: 20px;
+  color: #fff;
+}
+@keyframes upAndDown{
+   0%{transform: translate(0, 0)}
+   50%{transform: translate(0, 50)}
+   100%{transform: translate(0, 0)}
+}
