@@ -15,6 +15,13 @@ img.homepic{
   width: 100%;
   height: 100%;
 }
+.bg_active{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
 .homebtn{
     position: absolute;
     margin: auto;
@@ -32,11 +39,7 @@ img.homepic{
 	50%  {transform: scale(0.9, 0.9);}
 	100% {transform: scale(1, 1);}
 }
-/* @keyframes roate{
-    0%   {transform: rotateZ(360deg);}
-	50%  {transform: rotateZ(360deg);}
-	100% {transform: rotateZ(360deg);}   
-} */
+
 .robot{
     position: absolute;
     bottom: 10%;
@@ -87,6 +90,16 @@ img.homepic{
     right: 0;
     top: 0;   
 }
+.robort-bg{
+    position: absolute;
+    left: 2%;
+    top: 20%;
+    width: 121px;
+    animation: fangda2 5s linear 2s infinite alternate;
+}
+.robort-bg.second{
+    top: 60%;
+}
 .pipe{
     width: 32px;
     height: 100%;
@@ -118,18 +131,18 @@ img.homepic{
     overflow-y: hidden;
 }
 .inner-wrapper{
-    width: 100%;
+    width: 2800px;
     overflow: hidden;
 }
 .position{
-    width: 0px;
+    width: 400px;
     float: left;
     /* height: 100%; */
     position: relative;
     float: left;
 }
 .research{
-    width:100%;
+    /* width:100%; */
 }
 .researchpic{
     width: 100%;
@@ -140,9 +153,59 @@ img.homepic{
     left: 30px;
     top: 80px;
     transform: skew(120deg,0deg);
-    width: 189px;
+    width: 151px;
     animation: upAndDown 5s linear 2s infinite alternate;
 }
+.creategif{
+    position: absolute;
+    left: 30px;
+    top: 22%;
+    transform: skew(120deg,0deg);
+    width: 160px;
+    animation: upAndDown 5s linear 2s infinite alternate;
+}
+.autogif{
+    position: absolute;
+    left: 50px;
+    top: 30%;
+    /* transform: skew(120deg,0deg); */
+    width: 102px;
+    animation: upAndDown 5s linear 2s infinite alternate;
+}
+.itgif{
+    position: absolute;
+    left: 50px;
+    top: 5%;
+    width: 149px;
+    animation: upAndDown 5s linear 2s infinite alternate;    
+}
+.positiongif{
+    position: absolute;
+    left: 50px;
+    top: 25%;
+    width: 100px;
+    animation: upAndDown 5s linear 2s infinite alternate;
+}
+.salegif{
+    position: absolute;
+    left: 39%;
+    top: 26%;
+    width: 102px;
+    animation: upAndDown 5s linear 2s infinite alternate;  
+}
+@keyframes roate{
+    0%   {transform: rotateZ(360deg);right:0%;}
+	50%  {transform: rotateZ(0deg);right: 22%;}
+	100% {transform: rotateZ(360deg);right: 42%;}   
+} 
+.rotaterobort{
+    position: absolute;
+    right: 0%;
+    bottom: 21%;
+    width: 102px;
+    animation: roate 5s linear 2s infinite alternate;
+}
+
 .introduce{
     position: absolute;
     width: 80%;
@@ -166,6 +229,13 @@ img.homepic{
   padding: 20px;
   color: #fff;
 }
+.robortEnd{
+    position: absolute;
+    right: 30%;
+    top: 10%;
+    width: 150px;
+    animation: translateAndScale 5s linear 2s infinite alternate;  
+}
 @keyframes upAndDown{
    0%{
             transform: translate(0, 0);
@@ -178,4 +248,10 @@ img.homepic{
 	-webkit-transform:translate(0px,50px); /* Safari and Chrome */
    }
    100%{transform: translate(0, 0)}
+}
+@keyframes translateAndScale
+{
+	0%   {transform: translate(50px,50px);}
+	50%  {transform: scale(0.8, 0.8);}
+	100% {transform: scale(1.1, 1.1);}
 }
