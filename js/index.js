@@ -48,11 +48,17 @@ $(function(){
 
 
     // 音乐的停止和旋转
+    var off = false;
     $(".music-wrap").click(function(){
-        // $(this).find("audio").get(0).play();
-        // $(this).find(".music").css("animation","circle 2s linear 1s infinite");
-        $(this).find("audio").get(0).pause();
-        $(this).find(".music").css("animation","unset");
-    })
+        if(off){
+            $(this).find("audio").get(0).play();
+            $(this).find(".music").css("animation","circle 2s linear 1s infinite");
 
+            off = false;
+        }else{
+            $(this).find("audio").get(0).pause();
+            $(this).find(".music").css("animation","unset");
+            off = true;
+        }
+    })
 })
