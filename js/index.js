@@ -2,25 +2,57 @@ $(function(){
     console.log($(document).width());
     var clientWidth = $(document).width();
     var clientHeight = $(window).height();
+    $(".position,.home,.company").css("height",clientHeight);
+    $(".main-content").css("height",clientHeight);
     console.log(clientHeight);
-    $(".company, .introduce").hide();
+    //除了首页隐藏其他页面
+    $(".company, .introduce,.main-content").hide();
     $(".homebtn").click(function () {
         $(".company, .research").show();
         $('body,html').animate({'scrollTop':clientHeight},3000);
-        // $(".company").slideDown();
-        // $(".home").anmiate({'top',})
     });
-    // $(".research").click(function(){
-    //     $(".introduce").fadeIn();
-    // })
-    // $(".position").click(function(){
-    //     $(".inner-wrapper").css("width", clientWidth*2);
-    //     $(".position").css("width", clientWidth);
-        
-      
-    //     $(this).prev().animate(function(){
-    //         $(this).prev().show();
-    //         $(this).prev().css("width",clientWidth)
-    //     },3000);
-    // })
+    $(".company").click(function(){
+       $(".main-content").show();
+       $('body,html').animate({'scrollTop':clientHeight*2},3000);
+    })
+
+    // 场景切换
+    function changeImg(n){
+
+        $(".position").css("transition","2s");
+
+        $(".scene"+n).click(function(){
+
+             if(n==1){
+
+                $(".scene"+n).css("transform","translate(100%,0)");
+
+                $(".scene"+parseInt(parseInt(n)+1)).css("transform","translate(100%,0)");
+
+             }else{
+
+                 $(".scene"+n).css("transform","translate(200%,0)");
+
+                 $(".scene"+parseInt(parseInt(n)+1)).css("transform","translate(100%,0)");
+
+             }
+        })
+        	
+    }
+    changeImg(1);
+    changeImg(2);
+    changeImg(3);
+    changeImg(4);
+    changeImg(5);
+    changeImg(6);
+
+
+    // 音乐的停止和旋转
+    $(".music-wrap").click(function(){
+        // $(this).find("audio").get(0).play();
+        // $(this).find(".music").css("animation","circle 2s linear 1s infinite");
+        $(this).find("audio").get(0).pause();
+        $(this).find(".music").css("animation","unset");
+    })
+
 })
