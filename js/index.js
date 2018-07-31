@@ -2,19 +2,27 @@ $(function(){
     console.log($(document).width());
     var clientWidth = $(document).width();
     var clientHeight = $(window).height();
+    $(".position").css("width",clientWidth);
     $(".position,.home,.company").css("height",clientHeight);
     $(".main-content").css("height",clientHeight);
+    $(".main-content").hide();
+    $(".inner-wrapper").css({"height":clientHeight,
+                           "width": clientWidth*7});
     console.log(clientHeight);
     //除了首页隐藏其他页面
-    $(".company, .introduce,.main-content").hide();
-    $(".homebtn").click(function () {
+    $(".company, .introduce").hide();
+    $(".homebtn,.start-wrap").click(function () {
         $(".company, .research").show();
         $('body,html').animate({'scrollTop':clientHeight},3000);
     });
     $(".company").click(function(){
        $(".main-content").show();
        $('body,html').animate({'scrollTop':clientHeight*2},3000);
+       $(".main-content").animate({'scrollLeft':clientWidth*6},3000);
     })
+    
+    // 首页效果
+    
 
     // 场景切换
     function changeImg(n){
@@ -39,12 +47,12 @@ $(function(){
         })
         	
     }
-    changeImg(1);
-    changeImg(2);
-    changeImg(3);
-    changeImg(4);
-    changeImg(5);
-    changeImg(6);
+    // changeImg(1);
+    // changeImg(2);
+    // changeImg(3);
+    // changeImg(4);
+    // changeImg(5);
+    // changeImg(6);
 
 
     // 音乐的停止和旋转

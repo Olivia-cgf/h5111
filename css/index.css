@@ -3,8 +3,14 @@ html,body,img,div,marquee{
   padding:0;
   margin: 0;
 }
+html{
+    background: #fff;
+}
 body{
-    background: #0a154e;
+    background: -webkit-linear-gradient(left, #0c1854 , #0c1854);
+    max-width: 750px;
+    height: 100%;
+    margin: 0 auto;
 }
 div.home{
   width: 100%;
@@ -25,6 +31,101 @@ img.homepic{
     left: 0;
     top: 0;
 }
+.word-wrap{
+    width: 265px;
+    height: 185px;
+    background:url(../img/frame.png) no-repeat;
+    background-size: 100%;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    top: 20%;
+    right: 0;
+    animation: fadeleft 2s linear;
+    transform: translate(0px, 0px);
+}
+@keyframes fadeleft{
+    0%{
+        transform: translate(-200px, 0px);
+    }
+    100%{
+        transform: translate(0, 0px);
+    }
+}
+.text{
+    width: 238px;
+    height: 185px;
+    animation: faderight 2s linear ;
+    transform: translate(0px, 0px);
+}
+
+@keyframes faderight{
+    0%{
+        transform: translate(200px, 0px);
+    }
+    100%{
+        transform: translate(0, 0px);
+    }
+}
+.line-wrap{
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+.line{
+   width: 20px;
+   height: 20px;
+   background: #fff;
+   position: absolute;
+   left: 20%;
+   top: 20%;
+   border-radius: 50%;
+   animation: fadein 2s linear 0s infinite;
+   opacity: 1;
+}
+.line.line1{
+    left: 30%;
+    top: 10%;
+ }
+.line.line2{
+    left: 30%;
+    top: 10%;
+ }
+ .line.line3{
+    top: 20%;
+ }
+ .line.line4{
+    left: 60%;
+    top: 15%;
+ }
+ .line.line5{
+    left: 80%;
+    top: 13%;
+ }
+ .line.line6{
+    left: 5%;
+    top: 40%;
+ }
+ .line.line7{
+    left: 30%;
+    top: 80%;
+ }
+ .line.line8{
+    left: 50%;
+    top: 40%;
+ }
+ .line.line8{
+    left: 70%;
+    top: 60%;
+ }
+@keyframes fadein
+{
+	0%   {opacity: 1;}
+	50%  {transform: scale(0.9, 0.9) translate(0, 50px);}
+	100% {opacity: 0;transform: scale(1, 1) translate(0, 150px);}
+}
 
 @keyframes fangda
 {
@@ -44,6 +145,18 @@ img.homepic{
     -moz-transition: -moz-transform 2s ease-out;
     -o-transition: -o-transform 2s ease-out;
     -ms-transition: -ms-transform 2s ease-out; */
+}
+.robotimg{
+    width: 100%;
+}
+.flame{
+    position: absolute;
+    bottom: 0px;
+    position: absolute;
+    right: -2px;
+    bottom: 5px;
+    animation: fangda 1s linear 2s infinite alternate;
+    width: 36px;
 }
 /* .robot:hover {
     -webkit-transform: rotateZ(360deg);
@@ -73,6 +186,7 @@ img.homepic{
     right: 0;
     bottom: 0;
     background-size: 100%;
+    z-index: 10;
 }
 .end{
     width: 32px;
@@ -89,7 +203,7 @@ img.homepic{
     left: 10px;
     top: 10%;
     right: 0%;
-    width: 86px;
+    width: 121px;
     z-index: 3;
     animation: fangda 5s linear 2s infinite alternate;
 }
@@ -141,37 +255,56 @@ img.homepic{
     background: url(../img/ptwo.png);
     background-size: 100%;
     margin: 71px 0;
-    animation: fangda2 5s linear 2s infinite alternate;
+    /* animation: fangda2 5s linear 2s infinite ;  */
+    /* animation: pipeswiper 5s linear 0s infinite; */
+}
+/* @keyframes pipeswiper{
+    0%   {}
+	50%  {transform: scale(0.9, 0.9) translate(0, 0px);}
+	100% {transform: scale(1, 1) translate(0, 600px);}
+} */
+.pipe.half{
+    width: 37.5px;
+    height: 50%;
+    position: absolute;
+    background: rgba(63, 124, 168,1);
+    margin: auto;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: unset;
+    z-index: -1;
 }
 @keyframes fangda2
 {
 	0%   {transform: scale(1, 1);}
 	50%  {transform: scale(0.8, 0.8);}
-	100% {transform: scale(1.1, 1.1);}
+	100% {transform: scale(1.3, 1.3);}
 }
 .main-content{
-    /* overflow-x: scroll;
-    overflow-y: hidden; */
-    width: 100%;
-    height: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    /* width: 100%;
+    height: 100%; */
 }
 .inner-wrapper{
-    width: 100%;
+    /* width: 100%; */
     height: 100%;
     position: relative;
-    /* width: 2800px; */
+    width: 2800px;
     overflow: hidden;
 }
 .position{
     /* width: 400px; */
-    width: 100%;
+    /* width: 100%; */
     height: 100%;
-    position: absolute;
-    left: -100%;
-    top: 0;
+    position: relative;
+    float: left;
+    /* left: -100%; */
+    /* top: 0; */
 }
 .research{
-    left: 0;
+    /* left: 0; */
 }
 .researchpic{
     width: 100%;
@@ -185,6 +318,18 @@ img.homepic{
     z-index: -1;
     animation: upAndDown 5s linear 2s infinite alternate;
 }
+.guangsu{
+    position: absolute;
+    top: 28%;
+    right: 12%;
+    width: 140px;
+    animation: guangsuDown 5s linear 2s infinite alternate;
+}
+/* @keyframes guangsuDown{
+    0%   {height: 80px;}
+	50%  {transform: translate(100px,0);}
+	100% {transform: translate(20px,0);}      
+} */
 .creategif{
     position: absolute;
     left: 30px;
@@ -211,9 +356,10 @@ img.homepic{
 .positiongif{
     position: absolute;
     left: 50px;
-    top: 25%;
-    width: 100px;
+    top: 28%;
+    width: 130px;
     animation: upAndDown 5s linear 2s infinite alternate;
+    z-index: -1;
 }
 .salegif{
     position: absolute;
@@ -267,9 +413,9 @@ img.homepic{
 }
 .shineDot{
     position: absolute;
-    right: 4%;
+    right: 3%;
     bottom: 25%;
-    width: 69px;
+    width: 82px;
     animation: fangda 5s linear 2s infinite alternate;
 }
 @keyframes upAndDown{
