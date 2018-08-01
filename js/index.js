@@ -69,4 +69,7 @@ $(function(){
             off = true;
         }
     })
+
+    //光点的流动切换
+    $(".pipe .dot").animate("marginTop", "72px");
 })

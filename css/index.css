@@ -4,13 +4,15 @@ html,body,img,div,marquee{
   margin: 0;
 }
 html{
-    background: #fff;
+    /* background: #fff; */
 }
 body{
     background: -webkit-linear-gradient(left, #0c1854 , #0c1854);
-    max-width: 750px;
+    /* max-width: 750px;
     height: 100%;
     margin: 0 auto;
+    width: 100%;
+    height: 100%;*/
 }
 div.home{
   width: 100%;
@@ -59,14 +61,7 @@ img.homepic{
     transform: translate(0px, 0px);
 }
 
-@keyframes faderight{
-    0%{
-        transform: translate(200px, 0px);
-    }
-    100%{
-        transform: translate(0, 0px);
-    }
-}
+
 .line-wrap{
    position: absolute;
    left: 0;
@@ -120,19 +115,6 @@ img.homepic{
     left: 70%;
     top: 60%;
  }
-@keyframes fadein
-{
-	0%   {opacity: 1;}
-	50%  {transform: scale(0.9, 0.9) translate(0, 50px);}
-	100% {opacity: 0;transform: scale(1, 1) translate(0, 150px);}
-}
-
-@keyframes fangda
-{
-	0%   {transform: scale(1, 1);}
-	50%  {transform: scale(0.9, 0.9);}
-	100% {transform: scale(1, 1);}
-}
 
 .robot{
     position: absolute;
@@ -216,21 +198,7 @@ img.homepic{
     z-index: 3;
     animation: startbtn 5s linear 2s infinite alternate;
 }
-@keyframes startbtn{
-    0%{
-        transform: scale(1);
-        /* matrix 方法有六个参数，包含旋转，缩放，移动（平移）和倾斜功能 */
-        opacity: 1;
-    }
-    50%{
-        transform:  scale(0.89);
-        opacity: 0.6;
-    }
-    100%{
-        transform:  scale(1);
-        opacity: 1;
-    }
-}
+
 .robort-bg.second{
     top: 40%;
 }
@@ -275,12 +243,7 @@ img.homepic{
     bottom: unset;
     z-index: -1;
 }
-@keyframes fangda2
-{
-	0%   {transform: scale(1, 1);}
-	50%  {transform: scale(0.8, 0.8);}
-	100% {transform: scale(1.3, 1.3);}
-}
+
 .main-content{
     overflow-x: scroll;
     overflow-y: hidden;
@@ -313,23 +276,136 @@ img.homepic{
 .researchgif{
     position: absolute;
     left: 30px;
-    top: 80px;
-    width: 151px;
-    z-index: -1;
+    top: 120px;
+    width: 133px;
+    z-index: 1;
     animation: upAndDown 5s linear 2s infinite alternate;
 }
 .guangsu{
     position: absolute;
     top: 28%;
-    right: 12%;
-    width: 140px;
-    animation: guangsuDown 5s linear 2s infinite alternate;
+    right: 11%;
+    width: 151px;
+    animation: guangsuDown 5s linear 0s infinite alternate;
+    height: 218px;
 }
-/* @keyframes guangsuDown{
-    0%   {height: 80px;}
+.guangsu.guangsu2{
+    top: 37%;
+    left: 26%;
+    width: 151px;
+    animation: opcaityTran 5s linear 0s infinite alternate;
+    height: 218px;
+    height: 218px;
+}
+@keyframes opcaityTran{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes faderight{
+    0%{
+        transform: translate(200px, 0px);
+    }
+    100%{
+        transform: translate(0, 0px);
+    }
+}
+@keyframes fadein
+{
+	0%   {opacity: 1;}
+	50%  {transform: scale(0.9, 0.9) translate(0, 50px);}
+	100% {opacity: 0;transform: scale(1, 1) translate(0, 150px);}
+}
+
+@keyframes fangda
+{
+    0% {
+        transform: scale(1, 1);
+    }
+    
+    50% {
+        transform: scale(1.2, 1.2);
+    }
+    100% {
+        transform: scale(0.8, 0.8);
+    }
+}
+
+@keyframes startbtn{
+    0%{
+        transform: scale(1);
+        /* matrix 方法有六个参数，包含旋转，缩放，移动（平移）和倾斜功能 */
+        opacity: 1;
+    }
+    50%{
+        transform:  scale(0.89);
+        opacity: 0.6;
+    }
+    100%{
+        transform:  scale(1);
+        opacity: 1;
+    }
+}
+@keyframes fangda2
+{
+	0%   {transform: scale(1, 1);}
+	50%  {transform: scale(0.8, 0.8);}
+	100% {transform: scale(1.3, 1.3);}
+}
+ @keyframes guangsuDown{
+    0%   {height: 218px;}
+	50%  {}
+	100% {height: 80px;top: 43%;}      
+}
+@keyframes move{
+    0%   {transform: translate(20px,0);}
 	50%  {transform: translate(100px,0);}
-	100% {transform: translate(20px,0);}      
-} */
+	100% {transform: translate(20px,0);}   
+} 
+
+@keyframes upAndDown{
+    0%{
+             transform: translate(0, 0);
+         -ms-transform:translate(0px,0px); /* IE 9 */
+     -webkit-transform:translate(0px,0px); /* Safari and Chrome */
+    }
+    50%{
+             transform: translate(0px, 30px);
+         -ms-transform:translate(0px,30px); /* IE 9 */
+     -webkit-transform:translate(0px,30px); /* Safari and Chrome */
+    }
+    100%{transform: translate(0, 0)}
+ }
+ @keyframes slownupAndDown{
+    0%{
+             transform: translate(0, 0);
+         -ms-transform:translate(0px,0px); /* IE 9 */
+     -webkit-transform:translate(0px,0px); /* Safari and Chrome */
+    }
+    50%{
+             transform: translate(0px, 10px);
+         -ms-transform:translate(0px,10px); /* IE 9 */
+     -webkit-transform:translate(0px,10px); /* Safari and Chrome */
+    }
+    100%{transform: translate(0, 0)}
+ }
+ @keyframes translateAndScale
+ {
+     0%   {transform: translate(50px,50px);}
+     50%  {transform: scale(0.8, 0.8);}
+     100% {transform: scale(1.1, 1.1);}
+ }
+ @keyframes circle{
+    0%{
+        transform: rotateZ(0deg);   
+    }
+    100%{
+        transform: rotateZ(360deg);   
+    }
+}
 .creategif{
     position: absolute;
     left: 30px;
@@ -356,7 +432,7 @@ img.homepic{
 .positiongif{
     position: absolute;
     left: 50px;
-    top: 28%;
+    top: 23%;
     width: 130px;
     animation: upAndDown 5s linear 2s infinite alternate;
     z-index: -1;
@@ -366,13 +442,9 @@ img.homepic{
     left: 39%;
     top: 26%;
     width: 102px;
-    animation: upAndDown 5s linear 2s infinite alternate;  
+    animation: slownupAndDown 3s linear 2s infinite alternate;  
 }
-@keyframes move{
-    0%   {transform: translate(20px,0);}
-	50%  {transform: translate(100px,0);}
-	100% {transform: translate(20px,0);}   
-} 
+
 .rotaterobort{
     position: absolute;
     left: 0%;
@@ -409,7 +481,7 @@ img.homepic{
     right: 30%;
     top: 10%;
     width: 150px;
-    animation: translateAndScale 5s linear 2s infinite alternate;  
+    animation: translateAndScale 5s linear 0s infinite alternate;  
 }
 .shineDot{
     position: absolute;
@@ -417,25 +489,6 @@ img.homepic{
     bottom: 25%;
     width: 82px;
     animation: fangda 5s linear 2s infinite alternate;
-}
-@keyframes upAndDown{
-   0%{
-            transform: translate(0, 0);
-	    -ms-transform:translate(0px,0px); /* IE 9 */
-    -webkit-transform:translate(0px,0px); /* Safari and Chrome */
-   }
-   50%{
-            transform: translate(0px, 30px);
-    	-ms-transform:translate(0px,30px); /* IE 9 */
-	-webkit-transform:translate(0px,30px); /* Safari and Chrome */
-   }
-   100%{transform: translate(0, 0)}
-}
-@keyframes translateAndScale
-{
-	0%   {transform: translate(50px,50px);}
-	50%  {transform: scale(0.8, 0.8);}
-	100% {transform: scale(1.1, 1.1);}
 }
 .music-wrap{
     position: fixed;
@@ -453,12 +506,4 @@ audio{
     top: 0;
     width: 100%;
     height: 100%;
-}
-@keyframes circle{
-    0%{
-        transform: rotateZ(0deg);   
-    }
-    100%{
-        transform: rotateZ(360deg);   
-    }
 }
