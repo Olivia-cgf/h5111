@@ -21,9 +21,19 @@ $(function(){
        $(".main-content").animate({'scrollLeft':clientWidth*6},3000);
     })
     
-    // 首页效果
-    
-
+    //点击页面显示相应的职位
+    var off = false;
+    $(".position").click(function(){
+        if(off){
+            $(this).find(".introduce").fadeOut();
+            off = false;
+        }else {
+            $(this).find(".introduce").fadeIn();
+            off = true;
+        }
+        
+    })
+ 
     // 场景切换
     function changeImg(n){
 
@@ -70,6 +80,5 @@ $(function(){
         }
     })
 
-    //光点的流动切换
-    $(".pipe .dot").animate("marginTop", "72px");
+
 })
